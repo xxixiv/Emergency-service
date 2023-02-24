@@ -1,0 +1,208 @@
+@font-face {
+    font-family: primaryFont;
+    src: url(../fonts/Helvetica.ttf);
+  }
+
+*{
+    --primary-color: rgb(255, 0, 0);
+    --secondary-color-1: rgb(227, 223, 223);
+    --secondary-color-2: rgba(255, 3, 3, 0.329);
+    --secondary-color-3: rgba(255, 3, 3, 0.6);
+    --secondary-color-4: #8f8f8f;
+    --secondary-color-5: grey;
+    --secondary-color-6: rgb(203, 192, 192);
+    --secondary-color-7: rgb(82, 68, 68);
+}
+
+.box{
+    position: relative;
+    width: 45%;
+    height: 90%;
+    font-family: primaryFont;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 1s all;
+    box-shadow: 0 0.5rem 1.5rem var(--secondary-color-2);
+    animation: anime 6s linear infinite;
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 95%;
+    height: 90%;
+    background: linear-gradient(0deg, transparent, var(--primary-color), var(--primary-color));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 95%;
+    height: 90%;
+    background: linear-gradient(0deg, transparent, var(--primary-color), var(--primary-color));
+    transform-origin:bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+p{
+    margin-top: 40px;
+    font-weight: 100;
+    color: var(--secondary-color-4);
+}
+
+.form{
+    position: absolute;   
+    z-index: 10;
+    inset: 2px;
+    border-radius: 8px;
+    background: var(--secondary-color-1);
+    padding: 10% 8%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form h2{
+    color: var(--primary-color);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+}
+
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes anime{
+    0%{
+        box-shadow: 0 0 5px var(--secondary-color-3);
+        transition: 0.5s all;
+    }
+    
+    5%{
+        box-shadow: 3px 5px  8px var(--secondary-color-3);
+    }
+
+    15%{
+        box-shadow: 5px 8px 12px var(--secondary-color-3);
+    }
+
+    30%{
+        box-shadow: 7px 10px  12px var(--secondary-color-3);
+    }
+
+    60%{
+        box-shadow: 5px 8px  10px var(--secondary-color-3);
+    }
+
+    85%{
+        box-shadow: 3px 5px  8px var(--secondary-color-3);
+    }
+    100%{
+        box-shadow: 3px 5px  6px var(--secondary-color-3);
+    }
+}
+
+.input-Box{
+    position: relative;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.input-Box input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--secondary-color-5);
+    font-size: 1em;
+    letter-spacing: 00.05em;
+    z-index: 10;
+}
+
+.input-Box span{
+    position: absolute;
+    padding: 20px 0px 10px;
+    left: 0;
+    font-size: 0.75em;
+    color: var(--secondary-color-4);
+    pointer-events: none;
+    letter-spacing: 0.5em;
+    transition: 0.5s;   
+}
+
+.input-Box input:valid ~ span,
+.input-Box input:focus ~ span{
+    color: var(--primary-color);
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.input-Box i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--secondary-color-6);
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.input-Box input:valid ~ i,
+.input-Box input:focus ~ i{
+    height: 44px;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: var(--secondary-color-4);
+    text-decoration: none;
+}
+.links a:hover,
+.links a{
+    color: var(--primary-color);
+}
+
+input[type="submit"]{
+    border: none;
+    outline: none;
+    color: var(--secondary-color-7);
+    background: var(--secondary-color-6);
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="submit"]:active{
+    opacity: 0.8;
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="./css/style.css">
+         <link rel="stylesheet" href="./css/SignUp.css">
+         <title>LOG IN</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="./images/logo.png" alt="logo loading...">
+        </div> 
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="overlay"></div>
+        <div class="box-container">
+            <div class="box">
+                <div class="form">
+                <h2>SIGN UP</h2>
+                    <div class="input-Box">
+                        <input type="text" required="required">
+                        <span>Full Name</span>
+                        <i></i>
+                    </div>
+                    <div class="input-Box">
+                        <input type="date" required="required">
+                        <span>Date of Birth</span>
+                        <i></i>
+                    </div>
+                    <div class="input-Box">
+                        <input type="email" required="required">
+                        <span>Email Address</span>
+                        <i></i>
+                    </div>
+                    <div class="input-Box">
+                        <input type="text" required="required">
+                        <span>House Address</span>
+                        <i></i>
+                    </div>
+                    <div class="input-Box">
+                        <input type="tel" required="required">
+                        <span>Phone Number</span>
+                        <i></i>
+                    </div>
+                    <div class="input-Box">
+                        <input type="text" required="required">
+                        <span>Username</span>
+                        <i></i>
+                    </div>
+                    <div class="input-Box">
+                       
+                        <input type="password" required="required">
+                        <span>Password</span>
+                        <i></i>
+                    </div>
+                    <div class="links">
+                        <a href="./Profile.html">SignIn</a>
+                    </div>
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let menuToggle = document.querySelector(".toggle");
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('act')}
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+
+@media (max-width: 680px){
+  
+    .menu-btn.show{
+      border-radius: 20px;
+      margin-bottom: 130%;
+      margin-left: 55%;
+      background: #fff;
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 50%;
+      height: 20%;
+      transition: ease-in 1.2s;
+      transition-delay: 0.5s;
+      z-index: 1000;
+      
+    }
+
+    .menu-btn ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .menu-btn ul li{
+        list-style-type: none;
+        font-size: 1rem;
+    }
+
+    .menu-btn ul li:nth-child(1){
+        padding-bottom: 50%;
+        border-bottom: solid 1px ;
+    }
+
+    .menu-btn ul li:nth-child(2){
+        padding-top: 50%;
+    }
+
+    .menu-btn ul li a{
+        text-decoration: none;
+        list-style: none;
+        font-family: primaryFont;
+        color: #000066;
+        transition: all 1s;
+    }
+
+    .menu-btn ul li a:hover{
+        color: darkgoldenrod;
+        font-size: 1.5rem;
+      }
+      
+      .menu-btn ul .active {
+        font-size: 1.5rem;
+        color: darkgoldenrod;
+        border-bottom: 1px solid;
+      }
+  
+    .txtImg{
+      transform: scale(100%);
+      width: 110%;
+    }
+  
+    .section .box-container .form_box{
+      transform: scale(90%);
+      width: 100%;
+      height: 155%;
+    }
+  
+    .section .box-container .ambulance_box{
+        height: 40%;
+      }
+    
+      .section .box-container .checkup_box{
+        height: 40%;
+      }
+    
+      .section .box-container .map_box {
+        width: 180%;
+        height: 80%;
+      }
+
+      .box{
+        transform: scale(90%);
+        height: 100%;
+        width: 100%;
+    }
+
+  
+    .sub-btn{
+      margin-top: -1%;
+    }
+  
+    .section .box-container .form_box.show .form h2{
+      letter-spacing: 0;
+    }
+  }
+  
+  @media (max-width: 481px) {
+    .box{
+        transform: scale(130%);
+        width: 80%;
+        height: 90%;
+       } 
+
+       .header nav{
+        display: none;
+      }
+    
+      .header .logo {
+        width: 19%;
+        margin-right: 60%;
+      }
+  
+      .toggle{
+          display: flex;
+      }
+  
+    
+  
+    .section .box-container .form_box{
+      transform: scale(90%);
+      width: 100%;
+      height: 100%;
+    }
+  
+    .section .box-container .form_box.show .form h2{
+      letter-spacing: 0;
+    }
+  
+    .txtImg{
+      transform: scale(70%);
+      width: 160%;
+      margin-left: -30%;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .form .physio{
+      width: 20%;
+      position: inherit;
+      margin-left: -15%;
+      margin-bottom: -15%;
+    }
+  
+    .section .box-container .ambulance_box p {
+      font-size: 1.2rem;
+    }
+  
+    .section .box-container .checkup_box p {
+      font-size: 1.2rem;
+    }
+  
+    .toggle{
+      margin-right: 0;
+    }
+  
+  }
