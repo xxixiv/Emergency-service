@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evo services</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/dashboard@mediaquery.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/colour.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/@mediaqueries.css">
+</head>
+<body>
+    
+    <div class="section container">
+        <div class="overlay"></div>
+        <div class="navigation">
+            <ul>
+              <li>
+                     <a href="./logged In.html">
+                       <span class="icon header"><img class="image" src="./images/logo.png" alt=""></span>
+                     </a>
+              </li>
+              
+              <li>
+                    <a href="./logged In.html">
+                      <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                      <span class="title">Dashboard</span>
+                    </a>
+             </li>
+             
+             <li>
+                    <a href="#">
+                      <span class="icon"><ion-icon name="locate-outline"></ion-icon></span>
+                      <span class="title">Nearest Hospital</span>
+                    </a>
+             </li>
+             
+             <li>
+                    <a href="./stress relief.html">
+                      <span class="icon"><ion-icon name="accessibility-outline"></ion-icon></span>
+                      <span class="title">Stress Relief</span>
+                    </a>
+             </li>
+<!--              
+             <li> 
+                    <a href="forgotPassword">
+                      <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                      <span class="title">Password</span>
+                    </a>
+             </li> -->
+             
+             <li>
+                    <a href="./Profile.html">
+                      <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                      <span class="title">Sign Out</span>
+                    </a>
+             </li>
+            </ul>
+        </div> 
+        
+    
+    <div class="main">
+        <div class="topbar">
+                 <div class="toggle1">
+                          <ion-icon name="menu-outline"></ion-icon>
+                 </div>
+
+                 <div class="user">
+                          <img src="./icons/img.jpg" alt="">
+                 </div>    
+        </div>
+
+        
+        <div class="question-div">
+            what do you need?
+        </div>
+       
+   
+        
+                <!--box container kit-->
+                <div class="box-container">
+                    <div class="ambulance_box">
+                        <img src="./images/ambulance- (1).svg" alt="image loading">
+                        <p>Ambulance</p>
+                    </div>
+                    <div class="checkup_box">
+                        <img src="./images/Thermometer.svg" alt="image loading">
+                        <p>check up</p>
+                    </div>
+                <div class="map_box"><iframe class="box3" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63431.01187441399!2d3.3745635765615085!3d6.466034789113754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospitals%20around%20me!5e0!3m2!1sen!2sng!4v1663812305574!5m2!1sen!2sng" width="90%" height="90%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                
+        
+                    <div class="form_box">
+                    <div class="form">
+                    <div class="txtImg">
+                    <img src="./images/icons8-physiotherapy.svg" alt="" class="physio">
+                    <h2>Symptoms Check</h2>
+                    <h3 class="quest">What Are You Feeling?</h3>
+                </div>
+                <div class=" btn--selected"></div>
+                    <button class="btn" type="button">Fever</button>
+                    <button class="btn" type="button">Cough</button>
+                    <button class="btn" type="button">Catarrh</button>
+                    <button class="btn" type="button">Body Aches</button>
+                    <button class="btn" type="button">Headaches</button>
+                </div>  
+                    <button class="sub-btn">SUBMIT</button> 
+                    <h3 class="prompt">Thank you for your Entries, you have likely symptoms of Malaria or Cold. You're adviced to start treatment for it immediately</h3>
+                </div>
+                </div>
+                
+            </div>
+    </div>
+        
+            
+            <script src="./script.js">
+            </script>
+                <script>
+                    let toggle = document.querySelector('.toggle1');
+                    let navigation = document.querySelector('.navigation');
+                    let main = document.querySelector('.main');
+                
+                    toggle.onclick = function(){
+                         navigation.classList.toggle('active');
+                         main.classList.toggle('active')
+                    }
+                
+                    let list = document.querySelectorAll('.navigation li');
+                    function activeLink(){
+                         list.forEach((item) =>
+                         item.classList.remove('hovered'));
+                         this.classList.add('hovered');
+                    }
+                    list.forEach((item)=>
+                    item.addEventListener('mouseover',activeLink))
+                    </script>
+                    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </body>
+        </html>
